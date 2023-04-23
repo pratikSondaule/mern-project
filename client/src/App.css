@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+.App {
+    font-family: 'Mulish', sans-serif;
+}
+
+.box {
+    width: 450px;
+    height: 500px;
+    padding: 50px;
+    box-shadow: rgb(149, 148, 148) 0px 7px 29px 0px;
+}
