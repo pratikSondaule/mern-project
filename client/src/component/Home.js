@@ -44,21 +44,23 @@ const Home = () => {
                 </div>
             </div>
         );
+    }else{
+
+        return (
+            <div className="box m-auto mt-5">
+                <div className="text-center mb-3">
+                    <h1>Welcome {user && user.name}</h1>
+                </div>
+                <p className="text-center mb-3">You have logged in successfully</p>
+                <div className="d-flex justify-content-center">
+                    <button className="btn btn-primary" onClick={logout}>
+                        Logout
+                    </button>
+                </div>
+            </div>
+        )
     }
 
-    return (
-        <div className="box m-auto mt-5">
-            <div className="text-center mb-3">
-                <h1>Welcome {user && user.name}</h1>
-            </div>
-            <p className="text-center mb-3">You have logged in successfully</p>
-            <div className="d-flex justify-content-center">
-                <button className="btn btn-primary" onClick={logout}>
-                    Logout
-                </button>
-            </div>
-        </div>
-    )
 
 }
 
