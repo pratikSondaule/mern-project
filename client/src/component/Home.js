@@ -11,7 +11,7 @@ const Home = () => {
     const userHome = async () => {
         try {
           
-            const res = await axios.get("http://localhost:8000/api/auth/test",{
+            const res = await axios.get("https://mern-project-3cuz.onrender.com/api/auth/test",{
                 headers: {
                     Authorization: localStorage.getItem("token")
                 }
@@ -33,7 +33,17 @@ const Home = () => {
     };
 
     if(!localStorage.getItem("token")){
-        navigate("/login")
+        return (
+            <div className="box m-auto mt-5">
+                <div className="text-center mb-3">
+                    <h1>Hello There !!!</h1>
+                </div>
+                <div className="text-center">
+                    <NavLink to="/login" className="btn btn-primary m-2">Login</NavLink>
+                    <NavLink to="/register" className="btn btn-primary m-2">Register</NavLink>
+                </div>
+            </div>
+        );
     }
 
     return (

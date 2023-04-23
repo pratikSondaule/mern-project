@@ -18,7 +18,7 @@ const Register = () => {
         try {
             
             if(password === cpassword) {
-                const res = await axios.post("http://localhost:8000/api/auth/register",{name, email, password, cpassword});
+                const res = await axios.post("https://mern-project-3cuz.onrender.com/api/auth/register",{name, email, password, cpassword});
                 if(res.status === 201){
                     alert("User register successfully");
                     navigate("/login");
